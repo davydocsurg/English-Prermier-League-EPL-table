@@ -1,23 +1,23 @@
 <template>
   <b-row>
     <b-col cols="12">
-      <h2>
+      <b>
         Team Details
-      </h2>
+      </b>
       <b-jumbotron bg-variant="white">
         <template slot="header">
           {{team.name}}
         </template>
         <template slot="lead">
-          <b-img :src="require('../assets/img/' + team.image)" fluid alt="Responsive image"></b-img><br>
+          <b-img :src="require('../assets/logo/' + team.image)" fluid alt="Responsive image"></b-img><br>
           City: {{team.location}}<br>
           Stadium: {{team.stadium}}<br>
           Stadium Capacity: {{team.capacity}}<br>
           Manager: {{team.manager}}<br>
           Captain: {{team.captain}}<br>
         </template>
-        <hr class="my-4">
-        <b-btn block class="maps-btn" variant="success" @click.stop="showMaps(team.lat, team.lng)">Show Maps</b-btn>
+        <hr class="my-2">
+        <b-btn class="maps-btn" variant="success btn-lg" @click.stop="showMaps(team.lat, team.lng)">Show Maps<i class="fas fa-map-marker-alt"></i></b-btn>
       </b-jumbotron>
     </b-col>
   </b-row>
@@ -57,7 +57,6 @@ export default {
     padding: 2rem;
   }
   .maps-btn {
-    margin-right: 20px;
-    width: 70px;
+
   }
 </style>

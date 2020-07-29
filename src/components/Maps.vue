@@ -1,16 +1,19 @@
 <template>
+  <div>
+  <router-link to="/" class="ho">Home</router-link>
   <b-row>
     <b-col cols="12">
       <h2>
-        Team Details
+        Team  Map
       </h2>
       <GoogleMapLoader
         :mapConfig="mapConfig"
-        apiKey="AIzaSyBgZZK8umUqJn8d5CoIZqWPJ_qtMfqD9q0"
+        apiKey="API KEY"
       >
       </GoogleMapLoader>
     </b-col>
   </b-row>
+  </div>
 </template>
 
 <script>
@@ -36,3 +39,10 @@ export default {
   }
 };
 </script>
+
+<style lang="css">
+  .ho {
+    font-weight: bold;
+    color: green !important;
+  }
+</style>
